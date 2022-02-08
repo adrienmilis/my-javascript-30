@@ -34,8 +34,12 @@ function animateButton(key_code) {
 
 function logKey(e) {
 
+    if (down) return;
+    down = true;
     playSound(e.code);
     animateButton(e.code);
 }
 
-document.addEventListener('keypress', logKey);
+let down = false;
+document.addEventListener('keydown', logKey);
+document.addEventListener('keyup', () => {down = false});
