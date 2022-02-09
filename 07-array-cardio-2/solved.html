@@ -26,10 +26,10 @@
 
     // Some and Every Checks
     // Array.prototype.some() // is at least one person 19 or older?
-    let atLeastOne19 = people.some( (person) => 2022 - person.year > 19 );
+    let atLeastOne19 = people.some( (person) => 2022 - person.year >= 19 );
     console.log(atLeastOne19);
     // Array.prototype.every() // is everyone 19 or older?
-    let everyone19 = people.every( (person) => 2022 - person.year > 19 );
+    let everyone19 = people.every( (person) => 2022 - person.year >= 19 );
     console.log(everyone19);
 
     // Array.prototype.find()
